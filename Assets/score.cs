@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class score : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static score instance;
+
+    int scoreValue;
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void changescore(int getValue)
     {
-        
+        scoreValue += getValue;
+        Debug.Log(scoreValue);
     }
 }
