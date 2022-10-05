@@ -23,7 +23,7 @@ public class Enemy : Observer
     //What the box will do if the event fits it (will always fit but you will probably change that on your own)
     public override void OnNotify()
     {
-        //isAlert(spikeEvent.SpikeEditorColor());
+       
         isAlert();
     }
 
